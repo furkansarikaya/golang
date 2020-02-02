@@ -2,21 +2,22 @@ package main
 
 import "fmt"
 
-func add(x int,y int) int{
-	return x+y
+/*
+func add(x int, y int) int {
+	return x + y
 }
 
 //gelen veriyi değiştirebilmek için * kullandık.
-func sayHello(message *string){
+func sayHello(message *string) {
 	fmt.Println(*message)
-	*message="Hi Go!"
+	*message = "Hi Go!"
 }
-func main(){
-	fmt.Println(add(42,13))
-	message :="Hi"
+func main() {
+	fmt.Println(add(42, 13))
+	message := "Hi"
 	sayHello(&message)
 	fmt.Println(message)
-}
+}*/
 
 // Fonksiyonlar
 
@@ -132,3 +133,35 @@ func main() {
 
 }
 */
+
+// Fonksiyonlar : defer
+
+//Metot bitene kadar çalışmasını bekler ve defer yazan kod satırı en son çalışır.
+
+var isConnection bool = false
+
+func main() {
+	fmt.Printf("Connection open: %v\n", isConnection)
+	databaseProccessing()
+	fmt.Printf("Connection open: %v\n", isConnection)
+}
+
+func databaseProccessing() {
+	connect()
+	defer disconnect()
+
+	println("Deferring disconnet!")
+
+	fmt.Printf("Connection open: %v\n", isConnection)
+	println("Doing something")
+}
+
+func connect() {
+	isConnection = true
+	println("Connected to database!")
+}
+
+func disconnect() {
+	isConnection = false
+	println("Disconnected to database!")
+}
