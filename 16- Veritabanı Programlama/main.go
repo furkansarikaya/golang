@@ -13,16 +13,18 @@ func main() {
 		panic(err.Error())
 	}
 	defer db.Close()
-	var (
-		ID        int
-		Username  string
-		Email     string
-		Password  string
-		FirstName string
-		LastName  string
-		BirthDate string
-		IsActive  bool
-	)
+	/*
+		var (
+			ID        int
+			Username  string
+			Email     string
+			Password  string
+			FirstName string
+			LastName  string
+			BirthDate string
+			IsActive  bool
+		)
+	*/
 	/*
 		create table `users`(
 		`ID` int(11) not null AUTO_INCREMENT,
