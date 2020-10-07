@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sites version="1">
+    <site>
+        <Name>www.google.com</Name>
+        <Description>Arama Motoru</Description>
+        <Category>Search Engine</Category>
+    </site>
+    <site>
+        <Name>www.furkansarikaya.com</Name>
+        <Description>Kişisel blog sitesi</Description>
+        <Category>Blog</Category>
+    </site>
+    <site>
+        <Name>www.golang.com.tr</Name>
+        <Description>Go Türkiye Topluluğu</Description>
+        <Category>Community</Category>
+    </site>
+</sites>
